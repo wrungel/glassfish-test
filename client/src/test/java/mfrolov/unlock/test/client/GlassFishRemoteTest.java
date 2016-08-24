@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import mfrolov.unlock.test.lib.MyServiceRemote;
 
-public class UnlockTest {
+public class GlassFishRemoteTest {
 
     @Test
     public void test() {
