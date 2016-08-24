@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <parent>
+	  <groupId>mfrolov.unlock-test</groupId>
+	  <artifactId>unlock-test-parent</artifactId>
+	  <version>1.0-SNAPSHOT</version>  
+  </parent>
+
+  <artifactId>unlock-test-lib</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.glassfish.main.ejb</groupId>
+            <artifactId>javax.ejb</artifactId>
+            <version>3.1.2.2</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
