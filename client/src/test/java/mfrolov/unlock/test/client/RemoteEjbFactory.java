@@ -7,7 +7,7 @@ import javax.naming.NamingException;
 
 public class RemoteEjbFactory {
 
-    static final String GLOBE_SYNC_JNDI_PREFIX = "java:global/GlobeUnlockTest/";
+    static final String GLOBE_SYNC_JNDI_PREFIX = "java:global/GlobeGlassFishTest/";
 
     private RemoteEjbFactory() {
         // Utility class

@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
  
   <parent>
-	  <groupId>mfrolov.unlock-test</groupId>
-	  <artifactId>unlock-test-parent</artifactId>
+	  <groupId>mfrolov.glassfish-test</groupId>
+	  <artifactId>glassfish-test-parent</artifactId>
 	  <version>1.0-SNAPSHOT</version>  
   </parent>
 
-  <artifactId>unlock-test-lib</artifactId>
+  <artifactId>glassfish-test-lib</artifactId>
 
     <dependencies>
         <dependency>
