@@ -1,4 +1,4 @@
-package mfrolov.unlock.test.lib;
+package mfrolov.glassfishtest;
 
 import javax.ejb.Remote;
 

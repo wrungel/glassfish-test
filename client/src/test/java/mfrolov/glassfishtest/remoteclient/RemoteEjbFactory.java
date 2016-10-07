@@ -1,4 +1,4 @@
-package mfrolov.unlock.test.client;
+package mfrolov.glassfishtest.remoteclient;
 
 import java.util.Properties;
 
@@ -7,7 +7,8 @@ import javax.naming.NamingException;
 
 public class RemoteEjbFactory {
 
-    static final String GLOBE_SYNC_JNDI_PREFIX = "java:global/GlobeGlassFishTest/";
+    // java:global/GlobeTest/ProductCatalogueFacadeEjb
+    private static final String GLOBE_SYNC_JNDI_PREFIX = "java:global/GlobeTest/";
 
     private RemoteEjbFactory() {
         // Utility class
@@ -22,8 +23,24 @@ public class RemoteEjbFactory {
         return lookup(ejbName, remoteInterface);
     }
 
+    /**
+     *
+     *
+     * name: ProductCatalogueFacade
+     * remote interface: mfrolov.unlock.test.lib.ProductCatalogueFacade
+     * EJB class: mfrolov.unlock.test.lib.ProductCatalogueFacadeEjb
+     * Signature: ProductCatalogueFacadeEjb implements ProductCatalogueFacade
+     *
+     * Portable JNDI names for EJB ProductCatalogueFacade:
+     * java:global/GlobeTest/ProductCatalogueFacade!mfrolov.unlock.test.lib.ProductCatalogueFacade
+     * java:global/GlobeTest/ProductCatalogueFacade!mfrolov.unlock.test.lib.ProductCatalogueFacadeEjb
+     *
+     * (Non-portable) JNDI names for EJB ProductCatalogueFacade:
+     * mfrolov.unlock.test.lib.ProductCatalogueFacade
+     * mfrolov.unlock.test.lib.ProductCatalogueFacade#mfrolov.unlock.test.lib.ProductCatalogueFacade
+     */
     public static <T> T lookup(String ejbName, Class<T> remoteInterface) {
-        String JNDI_NAME = GLOBE_SYNC_JNDI_PREFIX + ejbName;
+        String JNDI_NAME = GLOBE_SYNC_JNDI_PREFIX + ejbName + "!" + remoteInterface.getName();
         try {
             Properties properties = new Properties();
             // some times the default port 3700 is different (for example if it is already used).

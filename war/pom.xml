@@ -20,6 +20,6 @@
     </dependencies>
 
     <build>
-        <finalName>GlobeGlassFishTest</finalName>
+        <finalName>GlobeTest</finalName>
     </build>
 </project>
